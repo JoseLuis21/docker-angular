@@ -1,0 +1,20 @@
+version: "2.1"
+
+services:
+  node:
+    build: .
+    container_name: image_angular_develop
+    ports:
+      - 8082:4200
+    volumes:
+      - "./app:/app"
+
+
+#COMANDOS PARA EJECUTAR
+
+# docker-compose --build
+# docker run --rm --interactive -p 8082:4200 --tty --volume "D:\DOCKER\docker-angular\app":/app docker-angular_node  bash
+# cd app
+# ng new proyecto
+# ng serve --host=0.0.0.0
+# docker-compose down --remove-orphans
